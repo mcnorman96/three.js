@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles.css";
+import styled from "styled-components";
+import Introduction from "./components/Introduction";
+import Sidebar from "./components/Sidebar";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper className="App">
+      <Sidebar />
+      <Introduction />
+    </Wrapper>
   );
 }
 
-export default App;
+const Wrapper = styled.div`
+  position: relative;
+  background: linear-gradient(37.94deg,rgb(16 8 74) 16.94%,#83a4ff 87.08%);
+  min-height: 100vh;
+  canvas {
+    height: 500px;
+  }
+`;
