@@ -27,10 +27,12 @@ const Introduction = () => {
 
 const Wrapper = styled.div`
   display: flex; 
+  flex-wrap: wrap;
   align-items:center;
   min-height: 100vh;
   > div {
-    flex: 1;
+    width: 50%;
+    min-width: 500px;
   }
 `;
 
